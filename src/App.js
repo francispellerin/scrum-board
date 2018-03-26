@@ -16,7 +16,7 @@ class App extends Component {
 
 getStories() {
 
-    fetch("http://localhost:3004/stories")
+    fetch("http://localhost:30004/stories")
     .then(res => res.json())
     .then(result => 
         this.setState({

@@ -8,8 +8,8 @@ class Story extends Component {
             <div style={{width:200 + 'px'}}>
                 <Card bgColor="#f4f4f4">
                     <CardHeader>{this.props.title}</CardHeader>
-                    <CardBody>jfkdlfjdlks fndkfjdsfj djfhdkjfhdjs fdjfshfjkhskj fndjfksdhfjk nfsdhfjskhf</CardBody>
-                    <CardFooter>{this.props.status}</CardFooter>
+                    <CardBody><p>description</p><div><span>2</span></div></CardBody>
+                    <CardFooter><button>{this.props.status}</button></CardFooter>
                 </Card>
             </div>
             

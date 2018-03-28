@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Story from './story';
+import Story from './components/story';
+import { Row, Col } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 class App extends Component {
 
-  state = {
-    stories: []
-};
+	state = {
+		stories: []
+	};
 
-  componentDidMount() {
-
-    this.getStories();
-}
+	componentDidMount() {
+		this.getStories();
+	}
 
 getStories() {
 
@@ -28,15 +30,17 @@ getStories() {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-          {this.state.stories.map(function(item){
-                    return <div><br/><Story title={item.title} status={item.status} /></div>;
-                  })
-          }
-        
+		
+		<div></div>
+		
+		<div style={{margin:"0 auto", maxWidth:"1200px"}}>
+			<Row>
+				{this.state.stories.map(function(item){
+					return <Col xs="12" sm="4" lg="3"><Story title={item.title} status={item.status} /></Col>;
+					})
+				}
+			</Row>
+		</div>
       </div>
     );
   }

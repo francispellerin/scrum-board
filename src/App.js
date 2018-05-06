@@ -9,16 +9,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
 
 	state = {
-		stories: []
+		stories: [],
+		doneStories: [],
+		inProgressStories: [],
+		newStories: [],
+		completionPercentage: 0,
+		bucketList: []
 	};
 
 	componentDidMount() {
 		this.getStories();
 	}
 
+getDoneStories(){}
+getInProgressStories(){}
+getNewStories(){}
+getCompletionPercentage(){}
+getBucketList(){}
+
 getStories() {
 
-    fetch("http://localhost:3004/stories")
+    fetch("http://localhost:3004/stories?status=Done")
     .then(res => res.json())
     .then(result => 
         this.setState({

@@ -1,3 +1,55 @@
 {
-  "stories": [{"id":15,"title":"web","status":"Active"},{"id":16,"title":"web","status":"In Progress"},{"id":17,"title":"gfhgfhg","status":"Design"},{"id":18,"title":"New suite","status":"In Progress"},{"id":19,"title":"Jouer une partie de coup","status":"In Progress"},{"id":20,"title":"gfdgdggfdg","status":"Design"},{"id":21,"title":"Create a user interface","status":"New"},{"id":22,"title":"Create an api","status":"New"}]
+  "stories": [
+    {
+      "id": 15,
+      "title": "web",
+      "status": "Done"
+    },
+    {
+      "id": 16,
+      "title": "web",
+      "status": "In Progress"
+    },
+    {
+      "id": 17,
+      "title": "gfhgfhg",
+      "status": "Done"
+    },
+    {
+      "id": 18,
+      "title": "New suite",
+      "status": "In Progress"
+    },
+    {
+      "id": 19,
+      "title": "Jouer une partie de coup",
+      "status": "In Progress"
+    },
+    {
+      "id": 20,
+      "title": "gfdgdggfdg",
+      "status": "New"
+    },
+    {
+      "id": 21,
+      "title": "Create a user interface",
+      "status": "New"
+    },
+    {
+      "id": 22,
+      "title": "Create an api",
+      "status": "New"
+    }
+  ],
+  "sprints" : 
+  [
+    {
+      "id": 23,
+      "start_date": "2018-05-07",
+      "end_date": "2018-05-28",
+      "total_points" : 12,
+      "completed_points": 8,
+      "completion_percentage": 75
+    }
+  ]
 }

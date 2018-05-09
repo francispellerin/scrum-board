@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Story from './components/story';
 import ScrumCard from './components/card';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Progress } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 class App extends Component {
 
@@ -61,7 +59,13 @@ getNewStories(){
 
 getCompletionPercentage(){
 
-	return 30;
+	fetch("http://localhost:3004/sprints/23")
+    .then(res => res.json())
+    .then(result => 
+        this.setState({
+					completionPercentage : result.completion_percentage
+        })
+		);
 }
 
 getBucketList(){
@@ -92,6 +96,16 @@ getStories() {
 
 			<h1>GEMINI - Sprint 23</h1>
 		
+		<div>
+		<Row>
+			<Col xs="12" sm="4" lg="2"></Col>
+			<Col xs="12" sm="4" lg="8">
+				<Progress color="success" value={this.state.completionPercentage} />
+			</Col>
+			<Col xs="12" sm="4" lg="2"></Col>
+		</Row>	
+		</div>
+
 		<div></div>
 		
 		<div style={{margin:"0 auto", maxWidth:"1200px"}}>
